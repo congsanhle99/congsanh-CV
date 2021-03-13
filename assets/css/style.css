@@ -90,7 +90,7 @@ button:hover {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(22, 201, 162, 0.4);
+    background-color: rgba(22, 201, 162, 0.6);
     transform: translate(-20px, -20px);
     border-radius: 5px;
 }
@@ -110,7 +110,7 @@ button:hover {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     justify-content: flex-start; /* nằm trên cùng cross axis */
     align-items: center;
 }
@@ -132,7 +132,6 @@ button:hover {
     text-decoration: none;
     margin: 8px;
     font-size: 1.4em;
-
 }
 
 .actions {
@@ -166,7 +165,7 @@ button:hover {
 
 .main {
     max-height: 80vh;
-    /* overflow-y: auto; */
+    overflow-y: auto; /* Nội dung không tràn khỏi khung đã quy định */
     background-color: #fff;
     /* align-self: center; */
     border-radius: 5px;
@@ -232,5 +231,83 @@ button:hover {
     /* border-bottom: 1px solid #ccc; */
 }
 
-.section-item .item .value {
+/*************************** MAIN DOMAINS *****************************/
+
+.asset .domains {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
+
+.section-item .domain-item {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8px 10px;
+}
+
+.section-item .domain-item i {
+    height: 36px;
+    width: 36px;
+    background-color: #52a59f;
+    border-radius: 50%;
+    /* căn icon vào giữa */
+    /* cách 1 */
+    /* line-height: 32px; */
+    /* cách 2 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.domain-name {
+    color: #333;
+    font-weight: 600;
+    margin: 16px auto 12px;
+}
+
+/*************************** SKILL *****************************/
+
+.section-item ul {
+    list-style-type: none;
+    margin-top: 12px;
+}
+
+.section-item li {
+    margin-top: 16px;
+    margin-left: 36px;
+}
+
+.section-item i {
+    color: #52a59f;
+    margin-right: 16px;
+    display: inline-block;
+}
+
+.section-item li.ide i {
+    color: #996dcc;
+}
+
+.section-item li.ui i {
+    color: #ce816a;
+}
+
+/* === Scrollbar Style=== */
+
+body ::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+    border: 4px solid #fff;
+}
+
+
