@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #313131;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    background: linear-gradient(135deg, #76c96e, #51a4a1);
+    padding: 40px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a, i, button, menuitem, menuitem i {
+    transition: all .4s;
+}
+
+a:hover,
+i:hover,
+button:hover {
+    color: #3ab9b1;
+    /* background: #eee; */
+}
+
+/*************************** MENU *****************************/
+
+.menu {
+    display: flex;
+    background-color: #fff;
+    /* margin-top: 30px; */
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu-item {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    /* font-size: 0.8em; */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.menu-item i {
+    font-size: 1.2em;
+    margin-bottom: 8px;  
+}
+
+.menu-item.active,
+.menu-item:hover,
+.menu-item.active i,
+.menu-item:hover i {
+    color: #3ab9b1;
+}
+
+/*************************** PROFILE *****************************/
+
+.profile{
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 70px;
+    max-height: 90vh;
+    min-width: 350px;
+    border-radius: 5px;
+    margin-left: 12px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(22, 201, 162, 0.4);
+    transform: translate(-20px, -20px);
+    border-radius: 5px;
+}
+
+.profile .img-container {
+    position: relative;
+    background: url(/assets/img/avt.jpg) no-repeat;
+    background-size: cover;
+    min-height: 350px;
+    background-position: 0 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.profile .profile-body {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: flex-start; /* nằm trên cùng cross axis */
+    align-items: center;
+}
+
+.profile-body .name {
+    margin: 32px auto 12px; /* trên 32, trái-phải auto, dưới 12 */
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+.profile-body .role {
+    color: #51aa41;
+    margin-bottom: 1em;
+    font-size: 1.6em;
+    letter-spacing: 1px;
+}
+
+.socials a {
+    text-decoration: none;
+    margin: 8px;
+    font-size: 1.4em;
+
+}
+
+.actions {
+    position: relative;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.actions button {
+    /* border: none; */
+    outline: none;
+    background: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background: #ddd;
+}
+
+/*************************** MAIN *****************************/
+
+.main {
+    max-height: 80vh;
+    /* overflow-y: auto; */
+    background-color: #fff;
+    /* align-self: center; */
+    border-radius: 5px;
+}
+
+.main * {
+    color: #666;
+}
+
+/*************************** ABOUT ME *****************************/
+
+.title {
+    font-size: 1.6em;
+    letter-spacing: 1px;
+    color: #313131;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.title span {
+    color: #3ab9b1;
+}
+
+.main .section-item{
+    padding: 20px;
+    padding-left: 32px;
+}
+
+/* Nội dung giới thiệu */
+.asset-body .section-item {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    
+}
+
+/* Chia thành 2 cột thông tin */
+.split .asset-body  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* chia lable và value thành 2 cột */
+.section-item .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.item label {
+    background-color: #3ab9b1;
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 4px;
+}
+
+/*  */
+.item label span {
+    color: #fff;
+    letter-spacing: 8px;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.section-item .item .value {
+}
